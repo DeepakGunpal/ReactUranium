@@ -5,29 +5,37 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 //function component
-const HeadingComponent = () => {
-  return <h1>Namaste World</h1>
+const HeadingComponent = (props) => {
+  return <h1>{props.title} {props.number}</h1>
 }
 
+//class component
 class HeadingComponentUsingClass extends React.Component {
   // constructor(){
 
   // }
+  
+  //render is must inside class component
   render() {
-    return <h1>Namaste World form class Component</h1>
+    return <h1>Namaste class -- {this.props.title}</h1>
   }
 }
 
 const CurrentTime = () => {
   return (
-    <p> {+new Date()} </p>
+    <p>
+      {" "}
+      {+new Date()} --
+      <HeadingComponentUsingClass title = "passed from current time" />
+      {" "}
+    </p>
   )
 }
 
 setInterval(() => root.render(
   <React.StrictMode>
-    <HeadingComponent />
-    <HeadingComponentUsingClass />
+    <HeadingComponent title="Namaste from Component" number="10" />
+    {/* <HeadingComponentUsingClass /> */}
     <CurrentTime />
   </React.StrictMode>
 ), 1000)
