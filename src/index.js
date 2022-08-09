@@ -14,7 +14,7 @@ class HeadingComponentUsingClass extends React.Component {
   // constructor(){
 
   // }
-  
+
   //render is must inside class component
   render() {
     return <h1>Namaste class -- {this.props.title}</h1>
@@ -25,7 +25,7 @@ const CurrentTime = () => {
   return (
     <p>
       {" "}
-      {+new Date()} --
+      {new Date().toLocaleTimeString()} --
       <HeadingComponentUsingClass title = "passed from current time" />
       {" "}
     </p>
