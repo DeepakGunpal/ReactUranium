@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.mainfile-container{
+  display: flex;
+}
+
+.form-container{
+  border: 2px solid red;
+  margin: 30px;
+  padding: 20px;
+}
+
+.form-container form button{
+  padding: 5px;
+  margin: 5px;
+}
+
+.form-container form input{
+  padding: 5px;
+  margin: 10px;
+}

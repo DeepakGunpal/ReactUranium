@@ -1,22 +1,22 @@
 [
   {
-    "name": "Deepak",
-    "age": 24,
+    "name": "Doraemon",
+    "age": 15,
     "gender": "M"
   },
   {
-    "name": "Sanjay",
-    "age": 20,
+    "name": "Shinchan",
+    "age": 5,
     "gender": "M"
   },
   {
-    "name": "Lucy",
-    "age": 28,
+    "name": "Shizuka",
+    "age": 14,
     "gender": "F"
   },
   {
-    "name": "Tom",
-    "age": 26,
+    "name": "Nobita",
+    "age": 15,
     "gender": "M"
   }
 ]

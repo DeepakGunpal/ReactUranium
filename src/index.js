@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Counter from './Counter';
+import FormComponent from './Form';
 import HeadingComponent from './HeadingComponent';
 import HeadingComponentUsingClass from './HeadingComponentUsingClass';
 import './index.css';
@@ -12,8 +13,8 @@ const CurrentTime = () => {
   return (
     <p>
       {" "}
-      {new Date().toLocaleString()} --
-      <HeadingComponentUsingClass title="passed from current time" />
+      {new Date().toLocaleString()}
+      {/* <HeadingComponentUsingClass title="passed from current time" /> */}
       {" "}
     </p>
   )
@@ -21,11 +22,16 @@ const CurrentTime = () => {
 
 root.render(
   <React.StrictMode>
+
+    <FormComponent />
     <HeadingComponent title="Namaste from Heading Component Title" number="10" />
     {/* <HeadingComponentUsingClass /> */}
-    {/* <CurrentTime /> */}
-    <Counter />
-    <List />
+    <CurrentTime />
+    <div className='mainfile-container'>
+      <Counter />
+      <List />
+    </div>
+
   </React.StrictMode>
 );
 
