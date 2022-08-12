@@ -1,0 +1,29 @@
+.count-component{
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.count-component button{
+    margin: 16px;
+    padding: 3px;
+    border-radius: 4px;
+}
+.count-component #increase{
+    background-color: green;
+}
+.count-component #decrease{
+    background-color: red;
+}
+
+.count-component p{
+    font-size: 24px;
+}
+
+.count-type span{
+    padding: 5px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    margin: 20px;
+}
