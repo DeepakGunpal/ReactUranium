@@ -4,6 +4,7 @@ import Counter from './Counter';
 import HeadingComponent from './HeadingComponent';
 import HeadingComponentUsingClass from './HeadingComponentUsingClass';
 import './index.css';
+import List from "./List"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -22,8 +23,9 @@ root.render(
   <React.StrictMode>
     <HeadingComponent title="Namaste from Heading Component Title" number="10" />
     {/* <HeadingComponentUsingClass /> */}
-    <CurrentTime />
+    {/* <CurrentTime /> */}
     <Counter />
+    <List />
   </React.StrictMode>
 );
 
