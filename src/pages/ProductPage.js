@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 function ProductPage() {
 
+    //use state hook
     const [count, setCount] = useState(0);
     const [decreaseCount, setDecreaseCount] = useState(100);
+
+    useEffect(() => {
+        // console.log("update");
+        document.title = `Incr - ${count} | decr - ${decreaseCount}`
+    })
 
     return (
         <div>

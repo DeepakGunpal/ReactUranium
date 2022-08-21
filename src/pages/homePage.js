@@ -30,8 +30,15 @@ function HomePage() {
             <div>
                 <a href="/product"> Go to product Page</a>
             </div>
+            <div>
+                <a href="/catfact"> Go to cat facts Page</a>
+            </div>
+            <div>
+                <a href="/crypto"> Go to Crypto Page</a>
+            </div>
             <br />
             <hr />
+            <br />
             <div>
                 <Convert />
                 <FormComponent />
