@@ -6,12 +6,12 @@ const ListComponent = () => {
     return <div className="user-list">
         <h2> List of Users </h2>
         {/* <User name="Batman" age={45} gender="M" /> */}
-        {userList.map((userData, index) =>
+        {userList.map(({ name, age, gender }, index) =>
             <User
-                name={userData.name}
-                age={userData.age}
-                gender={userData.gender}
-                // key={userData.name}
+                name={name}
+                age={age}
+                gender={gender}
+                // key={name}
                 key={index}
             />)}
     </div>

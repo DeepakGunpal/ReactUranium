@@ -37,11 +37,11 @@ class Counter extends React.Component {
             <input type="number" value={this.state.count} onChange={event => this.changeInputValue(event.target.value)} />
             <button id="increase" onClick={_ => this.increaseCounter()}> + Increase </button>
             <button id="decrease" onClick={_ => this.decreaseCounter()}> - Decrease </button>
-
+         
             <div className="count-type">
                 {/* 1st approach */}
-                {/* {(this.state.count % 2 == 0) && <span>Odd</span>}
-                {(this.state.count % 2 != 0) && <span>Even</span>} */}
+                {/* {(this.state.count % 2 !== 0) && <span>Odd</span>}
+                {(this.state.count % 2 === 0) && <span>Even</span>} */}
 
                 {/* 2nd approach */}
                 {/* {(this.state.count % 2 === 0) ? <span>Even</span> : <span>Odd</span>} */}

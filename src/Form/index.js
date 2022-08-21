@@ -28,8 +28,7 @@ class FormComponent extends React.Component {
 
     changeInputValue(value) {
         this.setState({
-            inputText: value,
-
+            inputText: value
         });
     }
 

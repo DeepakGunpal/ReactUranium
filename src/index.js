@@ -1,44 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Counter from './Counter';
-import FormComponent from './Form';
-import HeadingComponent from './HeadingComponent';
-import HeadingComponentUsingClass from './HeadingComponentUsingClass';
-import './index.css';
-import List from "./List"
+
+
+//react router
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import PaymentPage from './pages/PaymentPage';
+import ProductPage from './pages/ProductPage';
+import HomePage from './pages/homePage';
+import ErrorPage from './pages/errorPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const CurrentTime = () => {
-  return (
-    <p>
-      {" "}
-      {new Date().toLocaleString()}
-      {/* <HeadingComponentUsingClass title="passed from current time" /> */}
-      {" "}
-    </p>
-  )
-}
+
 
 root.render(
-  <React.StrictMode>
+  <div>
+    <div> Deepak's App </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        {/* //*how to accept parameter from path ? */}
+        <Route path='payment' element={<PaymentPage />}>
+          <Route path=':price' element={<PaymentPage />} >
+          {/* //* multiple params */}
+            <Route path=':quantity' element={<PaymentPage />} />
+          </Route>
+        </Route>
+        <Route path='product' element={<ProductPage />} />
+        <Route path='*' element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
+  </div>
+)
 
-    <FormComponent />
-    <HeadingComponent title="Namaste from Heading Component Title" number="10" />
-    {/* <HeadingComponentUsingClass /> */}
-    <CurrentTime />
-    <div className='mainfile-container'>
-      <Counter />
-      <List />
-    </div>
 
-  </React.StrictMode>
-);
-
-// setInterval(() => root.render(
-//   <React.StrictMode>
-//     <HeadingComponent title="Namaste from Heading Component Title" number="10" />
-//     {/* <HeadingComponentUsingClass /> */}
-//     <CurrentTime />
-//   </React.StrictMode>
-// ), 1000)
